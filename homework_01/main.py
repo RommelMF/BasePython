@@ -4,11 +4,8 @@
 """
 
 
-def power_numbers():
-    """
-    функция, которая принимает N целых чисел,
-    и возвращает список квадратов этих чисел
-    """
+def power_numbers(*args):
+   return list(map(lambda x: x ** 2, args))
 
 
 # filter types
@@ -17,9 +14,18 @@ EVEN = "even"
 PRIME = "prime"
 
 
-def filter_numbers():
-    """
-    функция, которая на вход принимает список из целых чисел,
-    и возвращает только чётные/нечётные/простые числа
-    (выбор производится передачей дополнительного аргумента)
-    """
+def filter_numbers(type, *args):
+    predicates = {
+        "odd": lambda x: x % 2 == 0,
+        "even": lambda x: x % 2 != 0,
+        "prime": define_prime_number
+    }
+    return list(filter(predicates[type], args))
+
+
+def define_prime_number(num):
+    value = 2
+    while num % value != 0:
+        value += 1
+    return value == num
+
