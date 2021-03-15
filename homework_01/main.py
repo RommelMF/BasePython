@@ -14,7 +14,7 @@ EVEN = "even"
 PRIME = "prime"
 
 
-def filter_numbers(type, *args):
+def filter_numbers(args, type):
     predicates = {
         "odd": lambda x: x % 2 == 0,
         "even": lambda x: x % 2 != 0,
@@ -29,3 +29,5 @@ def define_prime_number(num):
         value += 1
     return value == num
 
+# val = power_numbers(2,4)
+# print()
