@@ -15,18 +15,13 @@ from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import (
     declarative_base,
     relationship,
-    joinedload,
-    selectinload,
     sessionmaker,
 )
 from sqlalchemy import (
     Column,
     Integer,
     String,
-    DateTime,
     ForeignKey,
-    func,
-    select,
 )
 
 PG_CONN_URI = os.environ.get("SQLALCHEMY_PG_CONN_URI") or "postgresql+asyncpg://user:password@localhost:8002/project"
