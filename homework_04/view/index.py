@@ -3,7 +3,7 @@ from flask import Blueprint, request, jsonify, render_template, url_for, redirec
 
 index_app = Blueprint('index_app', __name__, url_prefix='/')
 
-@index_app.route("/about", endpoint='about')
+@index_app.route("/about/", endpoint='about')
 def about():
     return render_template('index/about.html')
 
