@@ -7,8 +7,10 @@ WORKDIR /app
 
 RUN pip install -U pip setuptools
 
-COPY . .
+COPY ./requirements.txt .
 RUN pip install -r requirements.txt
+
+COPY . .
 
 ENV FLASK_ENV = development
 ENV FLASK_DEBUG = 1
