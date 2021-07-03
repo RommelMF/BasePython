@@ -9,38 +9,29 @@
       Base
     {% endblock %}
     </title>
-    <style>
-       a {
-           font: bold 140% normal italic fantasy;
-           background-color: #cff4fc;
-       }
-       .d-flex {
-           background-color: #e6dbb9;
-       }
-    </style>
 </head>
 <body>
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Homework 04</a>
+    <a class="navbar-brand" href="#">Homework 06</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{ url_for('index_app.home') }}">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{ url_for('posts_app.list') }}">Posts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('index_app.about') }}">About</a>
+          <a class="nav-link" href="{{ url_for('posts_app.add') }}">Post Add</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('index_app.about') }}">About</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('index_app.home') }}">Home</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('posts_app.list') }}">Posts</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('posts_app.add') }}">Post add</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
