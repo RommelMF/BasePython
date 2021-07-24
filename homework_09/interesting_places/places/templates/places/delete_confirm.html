@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ object.name }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ object.name }}</h1>
+     <img src="{{ object.img.url }}" width="300px">
+    <h3>Are you sure?</h3>
+    <form method="post">
+    {% csrf_token %}
+        <button class="btn btn-primary" type="submit">Yes</button>
+    </form>
+
+{% endblock %}
